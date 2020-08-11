@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-size: 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      line-height: 1.5em;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px #000 solid;
+      margin-bottom: 10px;
+    }
+
+    #container {
+      width: 90%;
+      margin: auto;
+      padding: 10px;
+    }
+  </style>
+  <title>jQuery Crash Course | Events</title>
+</head>
+
+<body>
+  <header>
+    <h1>jQuery Crash Course | Events</h1>
+  </header>
+  <div id="container">
+    <h3>Mouse Events</h3>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <p class="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam atque pariatur possimus ipsa
+      aspernatur maxime minus libero quasi, eveniet rem velit fugit accusamus earum enim dicta natus quia ad hic?
+    </p>
+    <h1 id="coords"></h1>
+    <hr>
+    <form id="form">
+      <label>Name</label><br>
+      <input type="text" id="name" name="name">
+      <br>
+      <label>Email</label><br>
+      <input type="text" id="email" name="email">
+      <br>
+      <label>Gender</label><br>
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <script>
+    // place jQuery and JS inside this to wait for page to load
+    $(document).ready(() => {
+      // event listeners and things
+    });
+
+    // use event function or on function with event parameter
+
+    $('#btn1').click(function () {
+      console.log('Button 1 Clicked!');
+    });
+    // $('#btn1').click(() => {
+    //   console.log('Button 1 Clicked!');
+    // });
+
+
+    $('#btn1').on('click', function () {
+      console.log('Button 1 Clicked!');
+    });
+    // $('#btn1').on('click', () => {
+    //   console.log('Button 1 Clicked!');
+    // });
+
+    // other events and functions
+
+    // $('#btn1').on('click', () => {
+    //   $('.para1').hide();
+    // });
+    // $('#btn2').on('click', () => {
+    //   $('.para1').show();
+    // });
+
+    $('#btn3').on('click', () => {
+      $('.para1').toggle();
+    });
+
+    // $('#btn1').dblclick(() => {
+    //   $('.para1').toggle();
+    // });
+
+    // not an actual event (combines mouseenter and mouseleave)
+    // $('#btn1').hover(() => {
+    //   $('.para1').toggle();
+    // });
+
+    // $('#btn1').mouseleave(() => {
+    //   $('.para1').toggle();
+    // });
+    // $('#btn1').mouseenter(() => {
+    //   $('.para1').toggle();
+    // });
+
+    // $('#btn1').mousemove(() => {
+    //   $('.para1').toggle();
+    // });
+
+    // $('#btn1').mousedown(() => {
+    //   $('.para1').toggle();
+    // });
+    // $('#btn1').mouseup(() => {
+    //   $('.para1').toggle();
+    // });
+
+    // event
+
+    $('#btn1').click(e => {
+      console.log(e);
+      console.log(e.currentTarget.id);
+      console.log(e.currentTarget.innerHTML);
+      console.log(e.currentTarget.outerHTML);
+      // etc
+    });
+
+    $(document).on('mousemove', e => {
+      $('#coords').html('Coords: Y: ' + e.clientY + ' X: ' + e.clientX);
+    });
+
+    // () => {} does not work here because this selector will not
+    // reference the desired element
+    $('input').focus(function () {
+      // alert('Focus');
+      $(this).css('background', 'pink');
+    });
+    $('input').blur(function () {
+      // alert('Blur');
+      $(this).css('background', 'white');
+    });
+
+    $('input').keyup(e => {
+      console.log(e.target.value);
+    });
+
+    $('select#gender').change(e => {
+      console.log(e.target.value);
+    });
+
+    $('#form').submit(function (e) {
+      e.preventDefault();
+      let name = $('input#name').val();
+      console.log('Submitted: ' + name);
+    });
+
+
+
+  </script>
+</body>
+
+</html>
