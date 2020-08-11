@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Bootstrap Cheat Sheet</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <!-- .navbar-light or .navbar-dark required -->
+  <!-- need background .bg-{contextual-style}  -->
+  <!-- need .navbar-expand-{breakpoint} -->
+  <!-- separate selectors .nav, .nav-item, .nav-link -->
+  <!-- .navbar-brand link -->
+  <!-- .navbar-toggler button -->
+  <!-- .collapse and .navbar-collapse  -->
+  <!-- see documentation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron text-center">
+    <h1 class="display-3">Welcome to My Website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis consequuntur tempore accusantium voluptas, molestias nesciunt?</p>
+    <a href="#" class="btn btn-primary">Read More</a>
+  </div>
+
+  <!-- Typography -->
+  <div class="container">
+    <!-- Titles (no .page-header) -->
+    <h1 class="display-1">Bootstrap Cheat Sheet
+      <small class="text-muted">Secondary Text</small>
+    </h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam eligendi</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam eligendi voluptatem inventore maiores
+      labore.</p>
+
+    <hr>
+
+    <p><mark>This text is highlighted.</mark></p>
+    <p><del>This text is deleted.</del></p>
+    <p><s>This text is no longer accurate/relevant.</s></p>
+    <p><ins>This text is inserted.</ins></p>
+    <p><u>This text is underlined.</u></p>
+    <p><small>This text is small.</small></p>
+    <p><strong>This text is bold.</strong></p>
+    <p><em>This text is italicized.</em></p>
+
+    <hr>
+
+    <!-- Text Utility -->
+    <p class="text-lowercase">This text is lowercase.</p>
+    <p class="text-uppercase">This text is uppercase.</p>
+    <p class="text-capitalize">This text is capitalized.</p>
+
+    <hr>
+
+    <!-- Alignment -->
+    <p class="text-left">Left aligned text.</p>
+    <p class="text-center">Center aligned text.</p>
+    <p class="text-right">Right aligned text.</p>
+    <p class="text-justify">Justified text.</p>
+    <p class="text-nowrap">No wrap text.</p>
+
+    <hr>
+
+    <!-- Quick Float (no .pull-xxx) -->
+    <div class="float-right">Div floated to right.</div>
+    <div class="float-left">Div floated to left.</div>
+    <!-- Clear Float -->
+    <div class="clearfix"></div>
+
+    <hr>
+
+    <!-- Blockquote (no .blockquote-reverse) -->
+    <blockquote class="blockquote">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam eligendi</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+
+    <hr>
+
+    <!-- Lists -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <ul class="list-unstyled">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+
+    <ul class="list-inline">
+      <li class="list-inline-item">Item 1</li>
+      <li class="list-inline-item">Item 2</li>
+      <li class="list-inline-item">Item 3</li>
+      <li class="list-inline-item">Item 4</li>
+    </ul>
+
+    <hr>
+
+    <!-- Code -->
+    <code>&lt;h1&gt;HeadingText&lt;/h1&gt;</code>
+
+    <br>
+    Change directory with <kbd>cd</kbd>
+    <br>
+    To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+
+    <hr>
+
+    <!-- Contextual Text Colors -->
+    <p class="text-primary">primary</p>
+    <p class="text-secondary">secondary</p>
+    <p class="text-success">success</p>
+    <p class="text-danger">danger</p>
+    <p class="text-warning">warning</p>
+    <p class="text-info">info</p>
+    <p class="text-light">light</p>
+    <p class="text-dark">dark</p>
+    <p class="text-body">body</p>
+    <p class="text-muted">muted</p>
+    <p class="text-white">white</p>
+    <p class="text-black-50">black-50</p>
+    <p class="text-white-50">white-50</p>
+
+    <hr>
+
+    <!-- Contextual Background Colors -->
+    <p class="bg-primary">primary</p>
+    <p class="bg-secondary">secondary</p>
+    <p class="bg-success">success</p>
+    <p class="bg-danger">danger</p>
+    <p class="bg-warning">warning</p>
+    <p class="bg-info">info</p>
+    <p class="bg-light">light</p>
+    <p class="bg-dark">dark</p>
+    <p class="bg-white">white</p>
+    <p class="bg-transparent">transparent</p>
+  </div>
+
+  <hr>
+
+  <!-- Button -->
+  <div class="container">
+    <button class="btn btn-primary">Button</button>
+    <a href="#" class="btn btn-primary">Link</a>
+    <input type="submit" value="Submit" class="btn btn-primary">
+
+    <hr>
+
+    <!-- Contextual Button Colors -->
+    <button class="btn btn-primary">primary</button>
+    <button class="btn btn-secondary">secondary</button>
+    <button class="btn btn-success">success</button>
+    <button class="btn btn-danger">danger</button>
+    <button class="btn btn-warning">warning</button>
+    <button class="btn btn-info">info</button>
+    <button class="btn btn-light">light</button>
+    <button class="btn btn-dark">dark</button>
+    <button class="btn btn-dark">dark</button>
+    <button class="btn btn-link">link</button>
+
+    <hr>
+
+    <!-- Button Sizes (no .btn-xs) -->
+    <button class="btn btn-primary btn-lg">large</button>
+    <button class="btn btn-primary">normal</button>
+    <button class="btn btn-primary btn-sm">small</button>
+
+    <br>
+
+    <button class="btn btn-outline-success">outline</button>
+
+  </div>
+
+  <hr>
+
+  <!-- Form (no .help-block, .checkbox) -->
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="Add Name">
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="Add Email">
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea class="form-control" placeholder="Add Message"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Gener</label>
+        <select class="form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Upload File</label>
+        <input type="file">
+        <p class="form-text text-muted">Only png and jpg allowed</p>
+      </div>
+
+      <div class="form-check">
+        <label>
+          <input type="checkbox"> Check me out
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+
+    <hr>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password">
+        </dip>
+        <div class="form-check">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- Table (no .table-condensed) -->
+  <!-- contextual classes also now have .table-xxx -->
+  <div class="container">
+    <table class="table table-striped table-bordered table-hover table-sm">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr class="table-danger">
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr class="table-success">
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- List Group -->
+  <div class="container">
+    <ul class="list-group">
+      <li class="list-group-item">Item 1</li>
+      <li class="list-group-item">Item 2</li>
+      <li class="list-group-item">Item 3</li>
+      <li class="list-group-item">Item 4</li>
+      <li class="list-group-item">Item 5</li>
+    </ul>
+
+    <hr>
+
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action active">Item 1</a>
+      <a href="#" class="list-group-item list-group-item-action">Item 2</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-success">Item 3</a>
+      <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+      <a href="#" class="list-group-item list-group-item-action disabled">Item 5</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Card (used to be Panel/Well/Thumbnail) -->
+  <div class="container">
+
+  </div>
+
+  <!-- Alert -->
+  <div class="container">
+    <div class="alert alert-primary" role="alert">A primary alert</div>
+    <div class="alert alert-secondary" role="alert">A secondary alert</div>
+    <div class="alert alert-success" role="alert">A success alert</div>
+    <div class="alert alert-danger" role="alert">A danger alert</div>
+    <div class="alert alert-warning" role="alert">A warning alert</div>
+    <div class="alert alert-info" role="alert">A info alert</div>
+    <div class="alert alert-light" role="alert">A light alert</div>
+    <div class="alert alert-dark" role="alert">A dark alert</div>
+
+    <br>
+
+    <div class="alert alert-primary" role="alert">
+      A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
+
+    <br>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Progress Bars -->
+  <div class="container">
+    <div class="progress">
+      <div class="progress-bar" style="width: 50%;"></div>
+    </div>
+    <br>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width: 50%;">50%</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Labels & Badges -->
+  <div class="container">
+    <span class="badge badge-primary">primary</span>
+    <span class="badge badge-secondary">secondary</span>
+    <span class="badge badge-success">success</span>
+    <span class="badge badge-danger">danger</span>
+    <span class="badge badge-warning">warning</span>
+    <span class="badge badge-info">info</span>
+    <span class="badge badge-light">light</span>
+    <span class="badge badge-dark">dark</span>
+    <br>
+    <span class="badge badge-primary badge-pill">pill-badge</span>
+  </div>
+
+  <hr>
+
+  <!-- Images -->
+  <div class="container">
+    <img src="https://via.placeholder.com/300" class="img-fluid" alt="Responsive image">
+    <br>
+    <img src="https://via.placeholder.com/200" alt="..." class="img-thumbnail">
+    <br>
+    <img src="https://via.placeholder.com/150" class="rounded float-left" alt="...">
+    <img src="https://via.placeholder.com/150" class="rounded float-right" alt="...">
+    <div class="clearfix"></div>
+    <img src="https://via.placeholder.com/200" class="rounded-circle mx-auto d-block" alt="...">
+    <br>
+    <div class="text-center">
+      <img src="https://via.placeholder.com/200" class="rounded" alt="...">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Grids -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-8">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus deleniti eaque autem quibusdam temporibus
+          similique rem possimus perspiciatis, nemo at, molestiae vel minima voluptatibus odit hic sequi quidem sed
+          officiis.</p>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus sunt distinctio deleniti.</p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus sunt distinctio deleniti.</p>
+      </div>
+      <div class="col-md-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus sunt distinctio deleniti.</p>
+      </div>
+      <div class="col-md-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus sunt distinctio deleniti.</p>
+      </div>
+      <div class="col-md-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus sunt distinctio deleniti.</p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus sunt distinctio deleniti.</p>
+      </div>
+      <div class="col-md-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus sunt distinctio deleniti.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+      <div class="col-md-1">
+        <p>Box</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+  </div>
+
+  <div style="height:400px;"></div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
