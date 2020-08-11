@@ -1,6 +1,6 @@
 # es6-crash-course
 
-Traversy Media ES6 Tutorial - https://www.youtube.com/watch?v=2LeqilIw-28&feature=youtu.be&ab_channel=TraversyMedia
+Traversy Media ES6 Tutorial - https://youtu.be/2LeqilIw-28
 
 ***
 
