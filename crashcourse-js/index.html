@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning JavaScript</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Learning JavaScript</h1>
+      <p>With Brad Traversy</p>
+    </div>
+
+    <div class="container">
+
+    </div>
+
+    <script type="text/javascript">
+    // Variables: letters, numbers, underscores, dollar signs
+    // Begin with a letter (_ or $)
+    // Case sensitive
+
+    // camel case
+    var myFavoriteNumber;
+    myFavoriteNumber = 5;
+    // partial case
+    var MyFavoriteNumber;
+    // underscore
+    var my_favorite_number;
+    // (uninitialized variables)
+
+    // Number
+    var number1 = 35;
+    // String
+    var name = 'Anthony';
+    // concatention using + operator
+
+    // Array
+    var colors = ['red', 'blue', 'green'];
+    // indexed starting with 0
+    // array.length gives length of array (property)
+    var otherColors = new Array('red', 'yellow', 'orange');
+    otherColors[3] = 'green';
+    otherColors.push('purple');
+
+    var numbers = [5, 77, 6, 43]
+
+    var mixed = [8, 19, 'Seven'];
+
+    // .push
+    // .sort
+    // .reverse
+
+
+    // Loops
+    for (var i = 0; i < 10; i++) {
+      console.log('I love the number ' + i);
+    }
+
+    var j = 0;
+    while (j < 10) {
+      console.log(j);
+      j++;
+    }
+
+    var array1 = [10, 20, 30, 40, 50, 60];
+    array1.forEach(function(number){
+      console.log(number);
+    });
+    array1.reverse();
+    for (var h = 0; h < array1.length; h++){
+      console.log(array1[h]);
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning JavaScript</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Learning JavaScript</h1>
+      <p>With Brad Traversy</p>
+    </div>
+
+    <div class="container">
+
+    </div>
+
+    <script type="text/javascript">
+      // Decision Structures
+
+      // If
+      var var1 = 3;
+      var var2 = 4;
+
+      if (1 == 1) {
+        console.log('This is true! (numbers)');
+      }
+      if (var1 != var2) {
+        console.log('This is true! (variables)');
+      }
+      // Else
+      if (var1 == var2) {
+        console.log('This is true!');
+      } else {
+        console.log('This is false! (else)');
+      }
+
+      if (var1 != var2 && var1 == 3) {
+        console.log('This is true! (and)');
+      }
+      if (var1 == var2 || var1 == 3) {
+        console.log('This is true! (or)');
+      }
+
+      // === also compares data types
+      // && and
+      // || or
+
+      // Switch-Case
+      var fruit = 'apple';
+      switch (fruit) {
+        case "banana":
+          console.log('I hate bananas');
+          break;
+        case "apple":
+          console.log('I love apples');
+          break;
+        case "orange":
+          console.log('Oranges are ok');
+          break;
+        default:
+          console.log('I love all other fruits');
+          break;
+      }
+
+      // Object (literal)
+      var person = {
+        firstName: 'Brad',
+        lastName: 'Traversy',
+        age: 34,
+        children: ['Brianna', 'Nicholas'],
+        // nested object
+        address: {
+          street: '555 Something St',
+          city: 'Boston',
+          state: 'MA'
+        },
+        // function
+        fullName: function(){
+          return this.firstName + ' ' + this.lastName;
+        }
+      }
+      console.log(person.children[0]);
+      console.log(person.address.state);
+      console.log(person.fullName());
+
+      // Object (constructor)
+      var apple = new Object();
+      apple.color = 'red';
+      apple.shape = 'round';
+      apple.describe = function(){
+        return 'An apple is the color ' + this.color + ' and is the shape ' + this.shape;
+      }
+      console.log(apple);
+      console.log(apple.describe());
+
+      // Constructor Pattern
+      function Fruit(name, color, shape){
+        this.name = name;
+        this.color = color;
+        this.shape = shape;
+
+        this.describe = function() {
+          return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
+        }
+      }
+
+      var apple = new Fruit('apple', 'red', 'round');
+      console.log(apple);
+      var melon = new Fruit('melon', 'green', 'round');
+      console.log(melon.shape);
+      console.log(melon.describe());
+
+      // array of objects
+      var users = [
+        {
+          name: 'John Doe',
+          age: 30
+        },
+        {
+          name: 'Mark Smith',
+          age: 44
+        },
+        {
+          name: 'Shelly Williams',
+          age: 20
+        }
+      ];
+      console.log(users[0]);
+      console.log(users[0].name);
+
+    </script>
+  </body>
+</html>
